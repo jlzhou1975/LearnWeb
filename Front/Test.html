@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="FrontLibrary/bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="FrontLibrary/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="FrontLibrary/jQuery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="FrontLibrary/bootstrap-4.3.1/js/umd/popper.min.js"></script><!--必须用umd下的，根目录下的不能弹出菜单-->
+    <script src="FrontLibrary/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+    <script src="Scripts/Toolbar.js"></script>
+    <script src="Test.js"></script>
+</head>
+<body>
+    <div class="container-fluid ">
+        <div class="row no-gutters">
+            <nav class="col-12 col-sm-5 col-md-4 col-lg-3 col-xl-2 navbar-expand-sm bg-light navbar-light" style="min-height:100%;">
+                <!--要想实现垂直导航，不能加入navbar-->
+                <div class="navbar bg-info">
+                    <span><i class="fa fa-home fa-fw fa-2x text-danger"></i>考勤管理</span>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="NavigationArea">
+                </div>
+            </nav>
+            <div class=" col-sm-7 col-md-8 col-lg-9 col-xl-10 " style="padding-left:10px;">
+                <div class=" form-inline flex-md-row flex-column-reverse bg-light">
+                    <div class="col-md-7 ">
+                        <nav>
+                            <a class="breadcrumb-item" href="#">快速上手</a>
+                            <span class="breadcrumb-item" href="#">5分钟了解TypeScript</span>
+                        </nav>
+                    </div>
+                    <div class="col-md-5 nav justify-content-end">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button">登录</a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">个人设置</a>
+                                <a class="dropdown-item" href="#">联系客服</a>
+                                <a class="dropdown-item" href="#">关于</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">退出</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--放置button区-->
+                <div id="ToolbarArea" class="bg-light border" style="padding:10px;margin:10px 0"></div>
+                <!--查询区-->
+                <div class=" bg-light border" style="padding:10px;margin:10px 0">
+                    <form class="form-inline">
+                        <div class="form-group input-group-sm">
+                            <label class="control-label">姓名：</label>
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="form-group input-group-sm">
+                            <label class="control-label">姓名：</label>
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">编号：</label>
+                            <div class="form-inline input-group-sm">
+                                <input type="text" class="form-control" />
+                                <button class="btn btn-primary btn-sm">查询</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <div id="TableArea">
+                    </div>
+                    <div id="PagerArea">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
