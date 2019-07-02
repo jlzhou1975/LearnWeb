@@ -5,8 +5,9 @@
     theToolbar.addDefault(theToolbar.UPDATE, add);
     theToolbar.addDefault(theToolbar.SELECT, add);
     theToolbar.addItem("test", "测试", add);
-
     theToolbar.initial();
+
+    $("#QueryButton").click(add);
 
     $.ajax({
         url: "/Ajax/Ajax_Navigation.ashx",
@@ -43,5 +44,6 @@ $(document).ready(function () {
 });
 
 function add() {
-    //alert("add");
+    var xx = $('#QueryForm').serialize();
+    alert("add");
 }

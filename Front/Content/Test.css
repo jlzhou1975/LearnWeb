@@ -1,0 +1,7 @@
+﻿/*下拉菜单鼠标移上去自动弹出 https://zzll.org/article/bootstrap4-xialacaidan*/
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown > .dropdown-toggle:active {
+    pointer-events: none;
+}

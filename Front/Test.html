@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="FrontLibrary/bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <link href="FrontLibrary/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/Test.css" rel="stylesheet" />
     <script src="FrontLibrary/jQuery-3.4.1/jquery-3.4.1.min.js"></script>
     <script src="FrontLibrary/bootstrap-4.3.1/js/umd/popper.min.js"></script><!--必须用umd下的，根目录下的不能弹出菜单-->
     <script src="FrontLibrary/bootstrap-4.3.1/js/bootstrap.min.js"></script>
     <script src="Scripts/Toolbar.js"></script>
-    <script src="Test.js"></script>
+    <script src="Scripts/Test.js"></script>
+    <style>
+    </style>
 </head>
 <body>
     <div class="container-fluid ">
@@ -19,7 +22,7 @@
                 <!--要想实现垂直导航，不能加入navbar-->
                 <div class="navbar bg-info">
                     <span><i class="fa fa-home fa-fw fa-2x text-danger"></i>考勤管理</span>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavigationArea">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
@@ -28,16 +31,13 @@
             </nav>
             <div class=" col-sm-7 col-md-8 col-lg-9 col-xl-10 " style="padding-left:10px;">
                 <div class=" form-inline flex-md-row flex-column-reverse bg-light">
-                    <div class="col-md-7 ">
-                        <nav>
-                            <a class="breadcrumb-item" href="#">快速上手</a>
-                            <span class="breadcrumb-item" href="#">5分钟了解TypeScript</span>
-                        </nav>
+                    <div class="col-md-5" id="TitleArea">
+                        5分钟了解TypeScript
                     </div>
-                    <div class="col-md-5 nav justify-content-end">
+                    <div class="col-md-7 nav justify-content-end">
                         <div class="dropdown">
-                            <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button">登录</a>
-                            <div class="dropdown-menu dropdown-menu-right">
+                            <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button">当前用户名</a>
+                            <div class="dropdown-menu mt-0 dropdown-menu-right">
                                 <a class="dropdown-item" href="#">个人设置</a>
                                 <a class="dropdown-item" href="#">联系客服</a>
                                 <a class="dropdown-item" href="#">关于</a>
@@ -51,20 +51,20 @@
                 <div id="ToolbarArea" class="bg-light border" style="padding:10px;margin:10px 0"></div>
                 <!--查询区-->
                 <div class=" bg-light border" style="padding:10px;margin:10px 0">
-                    <form class="form-inline">
+                    <form class="form-inline" id="QueryForm" onsubmit="return false">
                         <div class="form-group input-group-sm">
-                            <label class="control-label">姓名：</label>
-                            <input type="text" class="form-control" />
+                            <label class="control-label">编号：</label>
+                            <input type="text" class="form-control" name="UserNo" />
                         </div>
                         <div class="form-group input-group-sm">
                             <label class="control-label">姓名：</label>
-                            <input type="text" class="form-control" />
+                            <input type="text" class="form-control" name="UserName" />
                         </div>
                         <div class="form-group">
-                            <label class="control-label">编号：</label>
+                            <label class="control-label">备注：</label>
                             <div class="form-inline input-group-sm">
-                                <input type="text" class="form-control" />
-                                <button class="btn btn-primary btn-sm">查询</button>
+                                <input type="text" class="form-control" name="Remark" />
+                                <button class="btn btn-primary btn-sm" id="QueryButton">查询</button>
                             </div>
                         </div>
                     </form>
